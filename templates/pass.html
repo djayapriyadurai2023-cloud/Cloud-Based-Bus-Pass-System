@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Digital Bus Pass</title>
+
+
+<style>
+
+body{
+
+    font-family: Arial, sans-serif;
+    background:#eaf3ff;
+
+}
+
+
+.container{
+
+    width:450px;
+    margin:40px auto;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0px 0px 15px gray;
+    text-align:center;
+
+}
+
+
+h2{
+
+    color:green;
+
+}
+
+
+.pass-card{
+
+    border:2px dashed #0066cc;
+    padding:20px;
+    border-radius:10px;
+    background:#f8fbff;
+
+}
+
+
+.pass-id{
+
+    color:#d63384;
+    font-size:22px;
+    font-weight:bold;
+
+}
+
+
+.price{
+
+    color:green;
+    font-size:24px;
+    font-weight:bold;
+
+}
+
+
+.qr img{
+
+    margin-top:15px;
+    border:5px solid #ddd;
+
+}
+
+
+button{
+
+    background:#0066cc;
+    color:white;
+    padding:12px 20px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    margin-top:20px;
+
+}
+
+
+button:hover{
+
+    background:#004c99;
+
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<h2>
+✅ Booking Successful
+</h2>
+
+
+
+<h3>
+🚌 Your Digital Bus Pass
+</h3>
+
+
+
+<div class="pass-card">
+
+
+
+<h3>
+Cloud Based Bus Pass System
+</h3>
+
+
+
+<hr>
+
+
+
+<p>
+Passenger Name
+</p>
+
+
+<b>
+{{session['user']}}
+</b>
+
+
+
+
+<p>
+Pass ID
+</p>
+
+
+<div class="pass-id">
+
+{{ticket}}
+
+</div>
+
+
+
+
+<p>
+Pass Amount
+</p>
+
+
+<div class="price">
+
+₹{{price}}
+
+</div>
+
+
+
+
+<p>
+Status:
+<span style="color:green">
+Active
+</span>
+</p>
+
+
+
+
+<hr>
+
+
+
+<div class="qr">
+
+
+<h3>
+QR Verification Code
+</h3>
+
+
+<img src="/{{qr_code}}" 
+width="160"
+height="160">
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+<br>
+
+
+<p>
+✅ Unique Pass ID prevents duplicate tickets
+</p>
+
+
+<p>
+✅ QR verification prevents fake tickets
+</p>
+
+
+<p>
+✅ Cloud storage prevents ticket loss
+</p>
+
+
+
+
+<button onclick="window.print()">
+
+Download / Print Pass
+
+</button>
+
+
+
+</div>
+
+
+</body>
+
+
+</html>
